@@ -70,7 +70,11 @@ Route::group(['prefix'=>'admin','middleware'=>['checkadmin']],function(){
 **这样只有管理员才能进入后台，这个算是最简单的权限系统吧。。。 **
 
 ### 3.开始后台UI
-1.富文本编辑器
+0.打算手动写模板，锻炼自己的css能力
+1.看个教程 https://www.youtube.com/watch?v=pXbEcGUtHgo
+
+
+
 
 
 
