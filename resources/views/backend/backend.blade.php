@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -22,10 +23,9 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav class="navbar  navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', '回首页') }}
                 </a>
@@ -62,9 +62,9 @@
             </div>
         </div>
     </nav>
-    <div class="admin-left">订单</div>
-    <div class="admin-right">第三方士大夫</div>
-    @yield('content')
+    <div id="admin-left">@include('partials.sidebar')</div>
+    <div id="admin-right">@yield('content')</div>
+    @include('partials.footer')
 </div>
 
 <!-- Scripts -->

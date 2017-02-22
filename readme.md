@@ -71,7 +71,22 @@ Route::group(['prefix'=>'admin','middleware'=>['checkadmin']],function(){
 
 ### 3.开始后台UI
 0.打算手动写模板，锻炼自己的css能力
+1.完成footer
+
 1.看个教程 https://www.youtube.com/watch?v=pXbEcGUtHgo
+
+
+### 4.开始后台逻辑
+1,控制器
+art make:controller NewsController --resource
+art make:controller BlogsController --resource 
+art make:controller BannersController --resource 
+
+2.Model和migration
+art make:model New -m
+art make:model Blog -m 
+art make:model Banner -m 
+
 
 
 

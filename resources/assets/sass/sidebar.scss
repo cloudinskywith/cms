@@ -1,0 +1,17 @@
+
+//.admin-sidebar{
+//  width: $admin-left-width;
+//  background: #0c9;
+//}
+
+.sidebar-item{
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 1px solid #2ab27b;
+}
+
+.sidebar-item > a{  //让整行都可点击
+  display: block;
+}
