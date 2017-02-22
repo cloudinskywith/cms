@@ -16,8 +16,10 @@
   },
   "dependencies": {
     "element-ui": "^1.1.6",
+    "simditor": "^2.3.6",
     "vue-quill-editor": "^1.1.1",
     "vue2-editor": "^1.1.0",
-    "vue2-html5-editor": "^0.6.0"
+    "vue2-html5-editor": "^0.6.0",
+    "wangeditor": "^2.1.22"
   }
 }

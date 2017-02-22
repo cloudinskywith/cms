@@ -91,103 +91,11 @@ art make:model Banner -m
 
 4.CRUD（先实现文章和新闻的，逻辑类似）
 
-### 5.富文本编辑器
-npm install --save vue2-editor
-https://github.com/davidroyer/vue2-editor
-```
-<template>
-    <div id="edit-news">
-        <div class="form-group">
-            <label for="title">新闻标题</label>
-            <input type="text" id="title" name="title"  class="form-control" v-model="newsTitle">
-        </div>
-        <div class="form-group">
-            <label for="content">新闻内容</label>
-            <!--<textarea name="content" id="content"  class="form-control"></textarea>-->
-            <vue-editor
-                    :editor-toolbar="customToolbar"
-                    :editor-content="newsContent"
-                    @editor-updated="handleUpdatedContent"
-                    @save-content="handleSavingContent"
-                    button-text="保存新闻">
-            </vue-editor>
+### 5.CRUD 
+1.使用Form和HTML
+composer require "laravelcollective/html":"^5.3.0"
 
-        </div>
-    </div>
-</template>
-
-<script>
-    import { VueEditor } from 'vue2-editor'
-    export default{
-        data(){
-            return{
-                newsContent:null,
-                newsTitle:'',
-                customToolbar:[
-                    ['bold','italic','underline'],
-                    [{'list':'ordered'},{'list':'bullet'}],
-                    ['image','code-block']
-                ]
-            }
-        },
-        methods:{
-            handleSavingContent(value){
-                console.log(value);
-                //1.将newsTitle和newsContent传递给后台
-                //2.入库成功后跳转到index页面
-                
-            },
-            handleUpdatedContent(value){
-                //监听变更事件
-            }
-        },
-        components:{
-            VueEditor
-        }
-    }
-</script>
-
-<style>
-    .save-button {
-        color: #fff;
-        padding: .5em 1em;
-        background-color: rgba(53, 73, 94, 0.85);
-        text-decoration: none;
-        border-radius: 2px;
-        cursor: pointer;
-        font-weight: 900;
-        transition: background-color .2s ease;
-        margin: 1em 0;
-        float: left;
-    }
-
-    .save-button:hover {
-        background-color: #35495e;
-    }
-</style>
-```
-
-### 6.数据入库
-anyway,一次入库算是成功了。
-```
-// 发送请求
-                axios
-                    .post('/admin/news/',{
-                        newsTitle:this.newsTitle,
-                        newsContent:value
-                    })
-                    .then(function(response){
-                        console.log(response);
-                    })
-                    .catch(function(error){
-                        console.log(error);
-                    });
-
-// 处理结果
-
-          
-```
-
-
-
+2.集成富文本编辑器
+npm install simditor
+npm install wangeditor --save 
 

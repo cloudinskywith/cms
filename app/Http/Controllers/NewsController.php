@@ -17,7 +17,7 @@ class NewsController extends Controller
     public function index()
     {
 //        $news = News::all();
-        $news = News::paginate(2);
+        $news = News::paginate(5);
         return view('backend.news.index',compact('news'));
 
     }
@@ -40,12 +40,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //先验证规则，然后入库
-        $news = new News();
-        $news->title = $request->newsTitle;
-        $news->content = $request->newsContent;
-        $news->save();
-        return response(['data'=>['message'=>'ok']]);
+
     }
 
     public function show($id)

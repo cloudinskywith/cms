@@ -13,6 +13,7 @@
             <td>阅读数</td>
             <td>创建时间</td>
             <td>更新时间</td>
+            <td>其他</td>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,10 @@
                 <td>{{ $value->read_counts }}</td>
                 <td>{{ $value->created_at }}</td>
                 <td>{{ $value->updated_at }}</td>
+                <td>
+                    <a class="btn btn-small btn-success" href="{{ URL::to('news/' . $value->id) }}">查看</a>
+                    <a class="btn btn-small btn-info" href="{{ URL::to('news/' . $value->id . '/edit') }}">编辑</a>
+                </td>
             </tr>
         @endforeach
         </tbody>
