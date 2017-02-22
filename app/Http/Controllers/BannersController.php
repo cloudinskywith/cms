@@ -13,7 +13,7 @@ class BannersController extends Controller
      */
     public function index()
     {
-        //
+        return response(['message'=>'你好轮播图']);
     }
 
     /**

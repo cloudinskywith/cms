@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
+use Illuminate\Auth\Access\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class NewsController extends Controller
 {
@@ -13,7 +16,10 @@ class NewsController extends Controller
      */
     public function index()
     {
-        //
+//        $news = News::all();
+        $news = News::paginate(2);
+        return view('backend.news.index',compact('news'));
+
     }
 
     /**
@@ -23,7 +29,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.news.create');
     }
 
     /**
@@ -34,15 +40,14 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //先验证规则，然后入库
+        $news = new News();
+        $news->title = $request->newsTitle;
+        $news->content = $request->newsContent;
+        $news->save();
+        return response(['data'=>['message'=>'ok']]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //

@@ -9,3 +9,7 @@
 .sidebar-item > a {
   display: block;
 }
+
+#edit-news {
+  padding: 0 10px 0 10px;
+}

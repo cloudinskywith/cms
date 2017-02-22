@@ -6,7 +6,7 @@
 #admin-left {
   float: left;
   width: 20%;
-  height: 95%;
+  height: 93%;
   position: absolute;
   overflow-y: scroll;
 }
@@ -15,7 +15,7 @@
   margin-left: 20%;
   float: right;
   width: 80%;
-  height: 95%;
+  height: 93%;
   position: absolute;
   overflow-y: scroll;
 }

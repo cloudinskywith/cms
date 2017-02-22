@@ -14,6 +14,17 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+Vue.component('add-record',require('./components/AddRecord.vue'));
+Vue.component('edit-news',require('./components/EditNews.vue'));
+// import Example from './components/Example.vue';
+// import AddRecord from './components/AddRecord.vue';
+// import EditNews from './components/EditNews.vue';
+
+var editor = require("vue2-html5-editor");
+
+Vue.use(editor, {
+    name: 'vue2-html5-editor'
+});
 
 const app = new Vue({
     el: '#app'

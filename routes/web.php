@@ -21,4 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::group(['prefix'=>'admin','middleware'=>['checkadmin']],function(){
     Route::get('/dashboard','DashboardController@index');
+    Route::resource('/news','NewsController');
+    Route::resource('/blogs','BlogsController');
+    Route::resource('/banners','BannersController');
 });
