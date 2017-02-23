@@ -1,8 +1,7 @@
 @extends('backend.backend')
 
-@section('body')
-    @include('error-notification')
-    {!! Form::model($image,['url' => '/images/'.$image->id, 'method' => 'PUT', 'files'=>true]) !!}
+@section('content')
+    {!! Form::model($image,['url' => '/admin/images/'.$image->id, 'method' => 'PUT', 'files'=>true]) !!}
 
     <img src="{{ asset($image->file) }}" height="150" />
     <div class="form-group">
@@ -20,8 +19,8 @@
         {!! Form::textarea('description',null,['class'=>'form-control']) !!}
     </div>
 
-    <button type="submit" class="btn btn-primary">Save</button>
-    <a href="{{ url('/images') }}" class="btn btn-warning">Cancel</a>
+    <button type="submit" class="btn btn-primary">保存</button>
+    <a href="{{ url('/admin/images') }}" class="btn btn-warning">取消</a>
 
     {!! Form::close() !!}
 @stop

@@ -28,14 +28,14 @@ class ImagesController extends Controller
     public function edit($id)
     {
         $image = Image::find($id);
-        return view('edit-image')->with('image', $image);
+        return view('backend.images.edit')->with('image', $image);
     }
 
     public function store(Request $request)
     {
         // Validation //
         $validation = Validator::make($request->all(), [
-            'caption'     => 'required|regex:/^[A-Za-z ]+$/',
+            'caption'     => 'required',
             'description' => 'required',
             'userfile'     => 'required|image|mimes:jpeg,png|min:1|max:250'
         ]);
@@ -60,14 +60,15 @@ class ImagesController extends Controller
         $image->description = $request->input('description');
         $image->save();
 
-        return redirect('/')->with('message','You just uploaded an image!');
+//        return redirect('/')->with('message','You just uploaded an image!');
+        return redirect('/admin/images')->with('message','你刚刚上传了一张图片');
     }
 
     public function update(Request $request, $id)
     {
         // Validation //
         $validation = Validator::make($request->all(), [
-            'caption'     => 'required|regex:/^[A-Za-z ]+$/',
+            'caption'     => 'required',
             'description' => 'required',
             'userfile'    => 'sometimes|image|mimes:jpeg,png|min:1|max:250'
         ]);
@@ -95,13 +96,13 @@ class ImagesController extends Controller
         $image->description = $request->input('description');
         $image->save();
 
-        return redirect('/')->with('message','You just updated an image!');
+        return redirect('/admin/images')->with('message','你刚刚更新了一张图片');
     }
 
     public function destroy($id)
     {
         $image = Image::find($id);
         $image->delete();
-        return redirect('/')->with('message','You just uploaded an image!');
+        return redirect('/admin/images')->with('message','你刚刚删除了一张图片');
     }
 }

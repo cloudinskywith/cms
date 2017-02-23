@@ -99,6 +99,8 @@ composer require "laravelcollective/html":"^5.3.0"
 https://github.com/UniSharp/laravel-filemanager 再手动集成tinymce https://www.tinymce.com/docs/get-started/localize-your-language/
 
 ### 6.图片浏览
+参照代码http://the-amazing-php.blogspot.jp/2015/06/laravel-5.1-image-gallery-crud.html
+
 1.Model和Migration
 php artisan make:model Image -m
 2.Schema
@@ -125,4 +127,7 @@ php artisan migrate
 4.Controller
 
 
+### 7.中场休息
+
+### 8.开始做前台
 

@@ -61,14 +61,14 @@
                     @endif
                 </ul>
                 @if (Session::has('message'))
-                    <div class="alert alert-info">{{ Session::get('message') }}</div>
+                    <div class="alert alert-info" style="width: 400px;margin: 0 auto;">{{ Session::get('message') }}</div>
                 @endif
             </div>
         </div>
     </nav>
     <div id="admin-left">@include('partials.sidebar')</div>
     <div id="admin-right">@yield('content')</div>
-    @include('partials.footer')
+    {{--@include('partials.footer')--}}
 </div>
 
 <!-- Scripts -->
