@@ -79,11 +79,46 @@
         </nav>
 
         @yield('content')
-
+    <!-- QQ在线客服 -->
+        <div id="qq-tools" class="qq-rides-cs">
+            <div class="qq-tools-l">
+                <a id="qq-tools-show" class="qq-tools-open" title="查看在线客服" style="display:block" href="javascript:void(0);">展开</a>
+                <a id="qq-tools-hide" class="qq-tools-close" title="关闭在线客服" style="display:none" href="javascript:void(0);">收缩</a>
+            </div>
+            <div class="qq-tools-r" style="width: 140px;">
+                <div class="cn">
+                    <h3 class="titZx">商城在线客服</h3>
+                    <ul>
+                        <li><span>客服</span>
+                            <a href="http://wpa.qq.com/msgrd?v=3&uin=3070047023&site=qq&menu=yes" target="_blank">
+                                <img border="0" alt="点击这里给我发消息" title="点击这里给我发消息" src="{{asset('images/qqonline.png')}}"/>
+                            </a>
+                        </li>
+                        <li style="border:none;"><span>电话：011-5654521</span> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- QQ在线客服结束 -->
         @include('partials.footer')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        var online = new Array();
+        $(function(){
+            $("#qq-tools-show").click(function(){
+                $('#qq-tools').animate({right:'0'});
+                $('#qq-tools-show').hide();
+                $('#qq-tools-hide').show();
+            });
+            $("#qq-tools-hide").click(function(){
+                $('#qq-tools').animate({right:'-150px'});
+                $('#qq-tools-show').show();
+                $('#qq-tools-hide').hide();
+            });
+        });
+    </script>
 </body>
 </html>

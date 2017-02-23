@@ -1,0 +1,18 @@
+.qq-rides-cs {font-size: 12px; background:#1B9E2A; display:table;position: fixed; top: 40%;right:-150px; z-index: 1500; border-radius:6px 0px 0 6px;}
+.qq-rides-cs a { color: #00A0E9;}
+.qq-rides-cs a:hover { color: #ff8100; text-decoration: none;}
+.qq-rides-cs .qq-tools-l {width: 36px;z-index:1;height:146px;display:table-cell;vertical-align:middle;*float:left;*margin-top:20px;_float:left;_margin-top:20px;}
+.qq-rides-cs .qq-tools-l a { font-size:0; text-indent: -999em; display: block;}
+.qq-rides-cs .qq-tools-r {float: left; padding: 5px;overflow:hidden;}
+.qq-rides-cs .qq-tools-r .cn {background:#F7F7F7; border-radius:6px;}
+.qq-rides-cs .cn .titZx{ font-size: 14px; color: #333;font-weight:600; line-height:24px;padding:5px;text-align:center;}
+.qq-rides-cs .cn ul {padding:0px;}
+.qq-rides-cs .cn ul li { line-height: 38px; height:38px;border-bottom: solid 1px #E6E4E4;overflow: hidden;text-align:center;}
+.qq-rides-cs .cn ul li span { color: #777;}
+.qq-rides-cs .cn ul li a{color: #777;}
+.qq-rides-cs .cn ul li img { vertical-align: middle;}
+.qq-rides-cs .qq-tools-open, .qq-rides-cs .qq-tools-close{  position: relative; z-index:9;left: 0;  background: url(../images/onlinecs.png) no-repeat; display:block;  height: 134px;}
+.qq-rides-cs .qq-tools-open { background-position: 0 0;}
+.qq-rides-cs .qq-tools-close{ background-position: -37px 0;}
+.qq-rides-cs ul li.top { border-bottom: solid #ACE5F9 1px;}
+.qq-rides-cs ul li.bot { border-bottom: none;}
