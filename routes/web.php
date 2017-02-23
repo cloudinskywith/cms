@@ -23,5 +23,6 @@ Route::group(['prefix'=>'admin','middleware'=>['checkadmin']],function(){
     Route::get('/dashboard','DashboardController@index');
     Route::resource('/news','NewsController');
     Route::resource('/blogs','BlogsController');
-    Route::resource('/banners','BannersController');
+//    Route::resource('/banners','BannersController');
+    Route::resource('/images', 'ImagesController');
 });

@@ -7,5 +7,5 @@
 </div>
 
 <div id="banners" class="sidebar-item">
-    <a href="/admin/banners">轮播图管理</a>
+    <a href="/admin/images">轮播图管理</a>
 </div>

@@ -32,6 +32,7 @@
             path_absolute : "/",
             selector: "textarea.my-editor",
             language: 'zh_CN',
+            height: 400,
             plugins: [
                 "advlist autolink lists link image charmap print preview hr anchor pagebreak",
                 "searchreplace wordcount visualblocks visualchars code fullscreen",

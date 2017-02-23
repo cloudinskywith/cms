@@ -95,7 +95,34 @@ art make:model Banner -m
 1.使用Form和HTML
 composer require "laravelcollective/html":"^5.3.0"
 
-2.集成富文本编辑器
-npm install simditor
-npm install wangeditor --save 
+2.集成富文本编辑器和图片上传
+https://github.com/UniSharp/laravel-filemanager 再手动集成tinymce https://www.tinymce.com/docs/get-started/localize-your-language/
+
+### 6.图片浏览
+1.Model和Migration
+php artisan make:model Image -m
+2.Schema
+```
+public function up()
+   {
+      Schema::create('images', function(Blueprint $table)
+      {
+         $table->increments('id');
+         $table->string('file');
+         $table->string('caption');
+         $table->text('description');
+         $table->timestamps();
+      });
+   }
+
+public function down()
+   {
+      Schema::dropIfExists('images');
+   }
+```
+3.Migration
+php artisan migrate
+4.Controller
+
+
 
