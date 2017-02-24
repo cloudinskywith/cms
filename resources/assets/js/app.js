@@ -17,6 +17,8 @@ Vue.component('example', require('./components/Example.vue'));
 Vue.component('add-record',require('./components/AddRecord.vue'));
 Vue.component('edit-news',require('./components/EditNews.vue'));
 Vue.component('image-gallery',require('./components/ImageGallery.vue'));
+Vue.component('exam-form',require('./components/ExamForm.vue'));
+Vue.component('video-and-audio',require('./components/VideoAndAudio.vue'));
 // import Example from './components/Example.vue';
 // import AddRecord from './components/AddRecord.vue';
 // import EditNews from './components/EditNews.vue';

@@ -42,14 +42,17 @@
         margin: 0 auto;
         width: 600px;
     }
+    el-carousel__item{
+        position: relative;
+    }
     .el-carousel__item > img{
         width: 600px;
         height: 300px;
     }
     .el-carousel__item h3 {
         position: absolute;
-        top: 250px;
-        right: 20px;
+        bottom: 0;
+        right: 5px;
         background: rgba(0, 0, 0, 0.25);
         padding: 1px 3px 1px 3px;
         color: #ffffff;

@@ -14,8 +14,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/backend.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
-    @yield('styles')
-    <!-- Scripts -->
+@yield('styles')
+<!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -40,7 +40,8 @@
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
@@ -52,7 +53,8 @@
                                         Logout
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                          style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
@@ -61,15 +63,18 @@
                     @endif
                 </ul>
                 @if (Session::has('message'))
-                    <div class="alert alert-info" style="width: 400px;margin: 0 auto;">{{ Session::get('message') }}</div>
+                    <div class="alert alert-info"
+                         style="width: 400px;margin: 0 auto;">{{ Session::get('message') }}</div>
                 @endif
             </div>
         </div>
     </nav>
     <div id="admin-left">@include('partials.sidebar')</div>
     <div id="admin-right">@yield('content')</div>
-    {{--@include('partials.footer')--}}
+    <div style="clear:both;"></div>
+
 </div>
+@include('partials.footer')
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>

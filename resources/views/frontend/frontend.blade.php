@@ -100,11 +100,11 @@
             </div>
         </div>
         <!-- QQ在线客服结束 -->
-        <div style="height: 1000px;"></div>    @include('partials.footer')
+        <div style="height: 1000px;"></div>
 
     </div>
 
-
+    @include('partials.footer')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
