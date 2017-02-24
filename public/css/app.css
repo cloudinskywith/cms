@@ -8317,6 +8317,10 @@ button.close {
   }
 }
 
+#app {
+  position: relative;
+}
+
 .footer {
   width: 100%;
   text-align: center;

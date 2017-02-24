@@ -87,21 +87,23 @@
             </div>
             <div class="qq-tools-r" style="width: 140px;">
                 <div class="cn">
-                    <h3 class="titZx">商城在线客服</h3>
+                    <h3 class="titZx">在线客服</h3>
                     <ul>
                         <li><span>客服</span>
-                            <a href="http://wpa.qq.com/msgrd?v=3&uin=3070047023&site=qq&menu=yes" target="_blank">
+                            <a href="http://wpa.qq.com/msgrd?v=3&uin=917042364&site=qq&menu=yes" target="_blank">
                                 <img border="0" alt="点击这里给我发消息" title="点击这里给我发消息" src="{{asset('images/qqonline.png')}}"/>
                             </a>
                         </li>
-                        <li style="border:none;"><span>电话：011-5654521</span> </li>
+                        <li style="border:none;"><span>电话：13610204915</span> </li>
                     </ul>
                 </div>
             </div>
         </div>
         <!-- QQ在线客服结束 -->
-        @include('partials.footer')
+        <div style="height: 1000px;"></div>    @include('partials.footer')
+
     </div>
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

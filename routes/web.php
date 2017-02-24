@@ -26,3 +26,7 @@ Route::group(['prefix'=>'admin','middleware'=>['checkadmin']],function(){
 //    Route::resource('/banners','BannersController');
     Route::resource('/images', 'ImagesController');
 });
+
+Route::group(['prefix'=>'frontend'],function(){
+    Route::get('/gallery','FrontendController@getGallery');
+});

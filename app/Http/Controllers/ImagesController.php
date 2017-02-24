@@ -10,7 +10,7 @@ class ImagesController extends Controller
 {
     public function index()
     {
-        $images = Image::paginate(10);
+        $images = Image::paginate(4);
         return view('backend.images.index')->with('images', $images);
     }
 

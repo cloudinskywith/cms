@@ -16,11 +16,14 @@ require('./bootstrap');
 Vue.component('example', require('./components/Example.vue'));
 Vue.component('add-record',require('./components/AddRecord.vue'));
 Vue.component('edit-news',require('./components/EditNews.vue'));
+Vue.component('image-gallery',require('./components/ImageGallery.vue'));
 // import Example from './components/Example.vue';
 // import AddRecord from './components/AddRecord.vue';
 // import EditNews from './components/EditNews.vue';
 
-
+import ElementUi from 'element-ui';
+import 'element-ui/lib/theme-default/index.css';
+Vue.use(ElementUi);
 
 
 const app = new Vue({
